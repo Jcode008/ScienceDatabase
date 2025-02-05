@@ -22,7 +22,7 @@ function sendMessage() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                //'Authorization': `Bearer OPENAIKEY`
+                
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini",
