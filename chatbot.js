@@ -22,7 +22,7 @@ function sendMessage() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                
+                'Authorization': `Bearer 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`
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini",
