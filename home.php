@@ -103,8 +103,8 @@ if(!isset($_SESSION['id'])){
                 $res_Fname = $result['FirstName'];
                 $res_Sname = $result['SurName'];
                 $res_Email = $result['Email'];
-                $res_Subjects = $result['subjects'];
-                $res_id = $result['Id'];
+                $res_Subjects = $result['Subjects'];
+                $res_id = $result['id'];
                 
                 
             }
@@ -134,8 +134,8 @@ if(!isset($_SESSION['id'])){
         </li>
         
         <li>
-        <a href="#">⚙️</a>
-        <a href="#">Settings </a>
+        <a href="settings.php">⚙️</a>
+        <a href="settings.php">Settings </a>
         </li>
 
         <li>
@@ -177,7 +177,7 @@ if(!isset($_SESSION['id'])){
 
 
     <div class="search-container">
-        <form action="/search" method="GET">
+        <form action="test.php" method="GET">
             <input type="text" class="search-bar" name="search" placeholder="What are you looking for?">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -208,36 +208,11 @@ if(!isset($_SESSION['id'])){
             <h2>➕➖✖️➗</h2>
             <h2>Mathematics</h2>
             <p>Master calculus, algebra and geometry</p>
-            <a href="math.php" class="learn-more">Get Teaching!</a>
+            <a href="maths.php" class="learn-more">Get Teaching!</a>
         </div>
     </div>
 
-    <div class="recent-files">
-        <h2>Your Recent Files</h2>
-        <div class="files-grid">
-            <div class="file-card">
-                <i class="fa fa-file-pdf-o"></i>
-                <p>Physics Lab Report</p>
-                <span>Modified 2 days ago</span>
-            </div>
-            <div class="file-card">
-                <i class="fa fa-file-powerpoint-o"></i>
-                <p>Chemistry Slides</p>
-                <span>Modified 3 days ago</span>
-            </div>
-            <div class="file-card">
-                <i class="fa fa-file-word-o"></i>
-                <p>Biology Notes</p>
-                <span>Modified 5 days ago</span>
-            </div>
-
-            <div class="file-card">
-                <i class="fa fa-file-word-o"></i>
-                <p>Biology Notes</p>
-                <span>Modified 7 days ago</span>
-            </div>
-        </div>
-    </div>
+    
 
     <div class="quick-tools">
         <h2>Quick Tools</h2>

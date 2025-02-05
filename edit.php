@@ -15,7 +15,7 @@ $id = $_SESSION['id'];
 $id = intval($id); // Convert to an integer to avoid any issues
 
 // Debugging: Output the query being executed
-$query = "SELECT * FROM accounts WHERE Id='$id'";
+$query = "SELECT * FROM accounts WHERE id='$id'";
 
 
 // Fetch user data for the form
@@ -28,7 +28,7 @@ if (mysqli_num_rows($query_result) > 0) {
     $res_Fname = $row['FirstName'];
 
     $res_Sname =    $row['SurName'];
-    $res_Subjects = $row['subjects'];
+    $res_Subjects = $row['Subjects'];
 
     // Check if the form was submitted
     if (isset($_POST['submit'])) {
@@ -39,7 +39,7 @@ if (mysqli_num_rows($query_result) > 0) {
         $subjects = implode(',', $_POST['subject']); // Convert array to comma-separated string
 
         // Update the user data
-        $update_query = "UPDATE accounts SET  Email='$email', FirstName='$Fname', SurName='$Sname', subjects='$subjects' WHERE Id='$id'";
+        $update_query = "UPDATE accounts SET  Email='$email', FirstName='$Fname', SurName='$Sname', Subjects='$subjects' WHERE Id='$id'";
       
         //reload the page 
         

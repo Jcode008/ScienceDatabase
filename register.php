@@ -29,7 +29,7 @@
                     </div> <br>";
                     echo "<a href= 'javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
                 }else{
-                    mysqli_query($con, "INSERT INTO accounts (FirstName,SurName, Email, subjects, Password) VALUES ('$FirstName','$SurName', '$email', '$subjects', '$password')" ) or die("Error Occured");
+                    mysqli_query($con, "INSERT INTO accounts (FirstName,SurName, Email, Subjects, Password) VALUES ('$FirstName','$SurName', '$email', '$subjects', '$password')" ) or die("Error Occured");
                     
                     echo "<div class='message'>
                     <p>Account created successfully!</p>

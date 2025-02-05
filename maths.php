@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch files
-$sql = "SELECT * FROM files WHERE Subject='Physics' ORDER BY FileName DESC";
+$sql = "SELECT * FROM files WHERE Subject='Maths' ORDER BY FileName DESC";
 $result = $conn->query($sql);
 ?>
 
@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics</title>
+    <title>Physics Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"

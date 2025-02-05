@@ -9,14 +9,14 @@ if(!isset($_SESSION['id'])){
 <?php
         if(isset($_SESSION['id'])){
             $id = $_SESSION['id'];
-            $query = mysqli_query($con, "SELECT * FROM accounts WHERE Id = '$id'");
+            $query = mysqli_query($con, "SELECT * FROM accounts WHERE id = '$id'");
             
             if($result = mysqli_fetch_assoc($query)){
                 $res_Fname = $result['FirstName'];
                 $res_Sname = $result['SurName'];
                 $res_Email = $result['Email'];
-                $res_Subjects = $result['subjects'];
-                $res_id = $result['Id'];
+                $res_Subjects = $result['Subjects'];
+                $res_id = $result['id'];
                 
                 
             }
@@ -28,15 +28,17 @@ if(!isset($_SESSION['id'])){
 
 <?php
 // Database connection
-$host = "localhost";
-$username = "root"; // Change this if needed
-$password = ""; // Change this if needed
-$dbname = "productivityapp1"; // Change to your database name
-$conn = new mysqli($host, $username, $password, $dbname);
+$host ="br48chr14wfe42z7yirg-mysql.services.clever-cloud.com";
+$username="uydxtwygd2yzb0ng";
+$password="lM36mTZWw85XKpSLnpr6";   
+$database="br48chr14wfe42z7yirg";  
+
+
+$con = mysqli_connect("$host", "$username", "$password", "$database", "3306");
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
 // File upload handling
@@ -55,7 +57,7 @@ if (isset($_POST['submit'])) {
         // Move file to the upload folder
         if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
             // Insert file details into database
-            $stmt = $conn->prepare("INSERT INTO files (FileName , FileType, FilePath, fileDesc, Author, Subject) VALUES (?, ?, ?,?,?,?)");
+            $stmt = $con->prepare("INSERT INTO files (FileName , FileType, FilePath, FileDesc, Author, Subject) VALUES (?, ?, ?,?,?,?)");
             $stmt->bind_param("ssssss", $fileName, $fileType, $filePath, $fileDescription, $auther, $subject); 
             
             if ($stmt->execute()) {

@@ -29,8 +29,8 @@
                     if(is_array($row) && !empty($row)){
                         $_SESSION['valid'] = $row['Email'];
                         $_SESSION['Username'] = $row['Username'];
-                        $_SESSION['Age'] = $row['Age'];
-                        $_SESSION['id'] = $row['Id'];
+                        
+                        $_SESSION['id'] = $row['id'];
                     }
                     else{
                         echo "<div class='message' style='text-align: center; background: #f9eded; padding:15px 0px; border:0cqb solid #699053; border-radius:5px; margin-bottom: 10px; color: red;'>
